@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCamer",
+			"Okras"
+		]
+	},
+	"bookmaker-desc": "Это пример расширения",
+	"bookmaker-i18n-welcome": "Добро пожаловать в файл локализации расширения Bookmaker.",
+	"bookmaker-bookmaker": "Привет, мир!",
+	"bookmaker-bookmaker-intro": "Добро пожаловать на спецстраницу «Привет, мир!» расширения Bookmaker.",
+	"bookmaker": "Привет, мир"
+}

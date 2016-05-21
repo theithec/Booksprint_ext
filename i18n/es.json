@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin",
+			"Macofe"
+		]
+	},
+	"bookmaker-desc": "Esta es una extensión de ejemplo",
+	"bookmaker-i18n-welcome": "Bienvenido al archivo de localización de la extensión de Bookmaker.",
+	"bookmaker-bookmaker": "Hola mundo",
+	"bookmaker-bookmaker-intro": "Bienvenidos a la página especial \"Hola mundo\" de la extensión Bookmaker.",
+	"bookmaker": "HolaMundo"
+}

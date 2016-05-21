@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Umherirrender",
+			"Amire80",
+			"Fhocutt",
+			"Liuxinyu970226"
+		]
+	},
+	"bookmaker-desc": "{{desc|name=Boilerplate|url=https://www.mediawiki.org/wiki/Extension:Boilerplate}}",
+	"bookmaker-i18n-welcome": "Used to greet the user when reading the i18n/??.json file.",
+	"bookmaker-bookmaker": "Page title of the Bookmaker special page.\n{{Identical|Create a new Book}}",
+	"bookmaker-bookmaker-intro": "Text displayed on the Bookmaker SpecialPage.",
+	"bookmaker": "Text of the link to the Bookmaker special page on SpecialPages.\n{{Identical|Create a new Book}}"
+}

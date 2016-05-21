@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nedergard",
+			"Nike",
+			"VezonThunder"
+		]
+	},
+	"bookmaker-desc": "Tämä on esimerkkilaajennus",
+	"bookmaker-i18n-welcome": "Tervetuloa Bookmaker-laajennuksen lokalisointitiedostoon."
+}

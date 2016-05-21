@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"AvatarTeam",
+			"SPQRobin"
+		]
+	},
+	"bookmaker-desc": "Dit is een voorbeeld van de uitbreiding",
+	"bookmaker-i18n-welcome": "Welkom bij het lokalisatiebestand van de Bookmaker-uitbreiding.",
+	"bookmaker": "Bookmaker"
+}

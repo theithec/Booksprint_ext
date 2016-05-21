@@ -1,0 +1,63 @@
+{
+	"name": "Bookmaker",
+	"version": "0.0.1",
+	"author": [
+		"Your Name"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Bookmaker",
+	"descriptionmsg": "bookmaker-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"BookmakerHooks": "Bookmaker.hooks.php",
+		"SpecialBookCreator": "specials/SpecialBookCreator.php",
+		"SpecialBookPublisher": "specials/SpecialBookPublisher.php", 
+		"SpecialBookVersionizer": "specials/SpecialBookVersionizer.php", 
+    "BookmakerAPI": "BookmakerAPI.php"
+	},
+  "APIModules": {
+    "bmaker": "BookmakerAPI"
+  },
+	"config": {
+		"BookmakerEnableFoo": true
+	},
+	"ExtensionMessagesFiles": {
+		"BookmakerAlias": "Bookmaker.i18n.alias.php"
+	},
+	"Hooks": {
+		"ArticlePageDataBefore": [
+			"BookmakerHooks::onArticlePageDataBefore"
+		],
+		"ArticleSaveComplete": [
+			"BookmakerHooks::onArticleSaveComplete"
+		]
+
+	},
+	"MessagesDirs": {
+		"Bookmaker": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.bookmaker": {
+			"scripts": [
+				"modules/ext.bookmaker.js"
+			],
+			"styles": [
+				"modules/ext.boilerPlate.foo.css"
+			],
+			"messages": [],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "Bookmaker"
+	},
+	"SpecialPages": {
+		"BookPublisher": "SpecialBookPublisher",
+		"BookCreator": "SpecialBookCreator",
+		"BookVersionizer": "SpecialBookVersionizer"
+	},
+	"manifest_version": 1
+}

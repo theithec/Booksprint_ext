@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"TomT0m"
+		]
+	},
+	"bookmaker-desc": "Voici un exemple d'extension",
+	"bookmaker-i18n-welcome": "Bienvenue dans le fichier de localisation de l'extension passepartout.",
+	"bookmaker-bookmaker": "Bonjour, le monde!",
+	"bookmaker-bookmaker-intro": "Bienvenue sur la page spéciale \"Hello world\" de l'extension Bookmaker.",
+	"bookmaker": "Bookmaker"
+}

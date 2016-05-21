@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño",
+			"Banjo",
+			"Elisardojm"
+		]
+	},
+	"bookmaker-desc": "Esta é unha extensión de exemplo",
+	"bookmaker-i18n-welcome": "Dámoslle a benvida ao ficheiro de localización da extensión Bookmaker.",
+	"bookmaker-bookmaker": "Ola mundo!",
+	"bookmaker-bookmaker-intro": "Benvido á páxina especial \"Ola mundo\" da extensión Bookmaker.",
+	"bookmaker": "Ola mundo"
+}

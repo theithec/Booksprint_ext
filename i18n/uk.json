@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Base",
+			"Ата"
+		]
+	},
+	"bookmaker-desc": "Це приклад розширення",
+	"bookmaker-i18n-welcome": "Ласкаво просимо до файлу локалізації  розширення Bookmaker extension.",
+	"bookmaker-bookmaker": "Hello world!",
+	"bookmaker-bookmaker-intro": "Ласкаво просимо на спеціальну сторінку «Hello world» розширення Bookmaker.",
+	"bookmaker": "Hello world"
+}

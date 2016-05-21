@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hylle"
+		]
+	},
+	"bookmaker-desc": "Dette er et eksempel på en udvidelse",
+	"bookmaker-i18n-welcome": "Velkommen til lokaliseringsdelen af Bookmaker udvidelsen."
+}

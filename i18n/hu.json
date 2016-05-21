@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dj"
+		]
+	},
+	"bookmaker-desc": "Ez egy példa kiterjesztés",
+	"bookmaker-i18n-welcome": "Üdvözlünk a Bookmaker kiterjesztés lokalizációs fájljában."
+}

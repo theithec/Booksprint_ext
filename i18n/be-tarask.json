@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizardist",
+			"Red Winged Duck"
+		]
+	},
+	"bookmaker-desc": "Гэта прыклад пашырэньня",
+	"bookmaker-i18n-welcome": "Вітаем у лякалізацыйным файле пашырэньня Bookmaker.",
+	"bookmaker-bookmaker": "Hello world!",
+	"bookmaker-bookmaker-intro": "Вітаем на спэцыяльнай старонцы «Hello world» пашырэньня Bookmaker",
+	"bookmaker": "Bookmaker"
+}

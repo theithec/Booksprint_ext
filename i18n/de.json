@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"bookmaker-desc": "Veranschaulicht beispielhaft eine einfache MediaWiki-Erweiterung",
+	"bookmaker-i18n-welcome": "Willkommen bei der Lokalisierungs- und Internationalisierungsdatei der Programmerweiterung Bookmaker.",
+	"bookmaker-bookmaker": "Ein neues Buch erstellen!",
+	"bookmaker-bookmaker-intro": "Willkommen auf der Spezialseite „Ein neues Buch erstellen“ der Erweiterung „Bookmaker“.",
+	"bookmaker": "Ein neues Buch erstellen",
+  "book-bookdata": "Buch erstellen",
+  "book-main": "Angaben zum Buch",
+  "book-title": "Titel",
+  "book-description": "Kurze Beschreibung",
+  "book-use-editors-or-authors": "\" Herausgeber\" oder \"Autor\" anzeigen?",
+  "book-editors-or-authors": "Herausgeber/Autoren", 
+  "book-contributors": "Kontributoren" ,
+  "book-toc": "Inhaltsverzeichnis",
+  "bookmaker-bookmaker-intro": "Über dieses Formular kann ein neues Buch angelegt werden"
+}

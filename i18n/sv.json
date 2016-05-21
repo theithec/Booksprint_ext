@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jopparn",
+			"LittleGun",
+			"Rockyfelle"
+		]
+	},
+	"bookmaker-desc": "Detta är ett exempel-tillägg",
+	"bookmaker-i18n-welcome": "Välkommen till Bookmaker-tilläggets lokaliseringsfil.",
+	"bookmaker-bookmaker": "Hello world!",
+	"bookmaker": "Hej världen"
+}
