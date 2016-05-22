@@ -7,8 +7,6 @@ class BookmakerAPI extends APIBase{
 
   public function execute() {
     validateUserInBookhelperGroup($this->getMain()->getUser()); 
-    //var_dump($this->getMain()->getRequest()->getUser());
-    //    die($wgPublishCommand);
     global $wgBookhelperCommand;
     $cmd = $this->getMain()->getVal( 'cmd' );
     $args = $this->getMain()->getVal( 'args' );
@@ -21,9 +19,6 @@ class BookmakerAPI extends APIBase{
     $this->getResult()->addValue(null, "Full Command", $full_cmd);
 
     exec($full_cmd, $result, $return_var);
-    echo "<hr>";
-    var_dump($result);
-    echo ("<hr> $return_var</hr>");
     
     $this->getResult()->addValue(null, "Result", $result);
     $this->getResult()->addValue(null, "Return Var", $return_var);

@@ -24,7 +24,6 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
       return;
     }
 
-    echo ("DOA". $this->doAction);
     if ($this->doAction) {
       $params = new DerivativeRequest(
         $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
@@ -35,11 +34,9 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
           'token' =>  $this->user->getEditToken(), 
         ) ,true  
       );
-      echo "call api";
       $api = new ApiMain( $params,  true );
       $api->execute();
       $data = $api->getResult()->getResultData();
-      var_dump($data);
       $status = $data['Result'][0];
       $json_result = json_decode($status);
       $errs = $json_result->errors;

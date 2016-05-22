@@ -153,9 +153,4 @@ class SpecialBookCreator extends SpecialPage {
     }
     
   }
-
-  protected function getGroupName() {
-    return 'bookmaker';
-  }
-
 }

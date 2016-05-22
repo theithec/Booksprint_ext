@@ -1,11 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kghbln",
-			"Metalhead64"
-		]
+			"Tim Heithecker",
+		
 	},
-	"bookmaker-desc": "Veranschaulicht beispielhaft eine einfache MediaWiki-Erweiterung",
+	"bookmaker-desc": "Erweiterung zur Versionierung und Konvertierung von zusammenhängenden Seiten (Büchern)",
 	"bookmaker-i18n-welcome": "Willkommen bei der Lokalisierungs- und Internationalisierungsdatei der Programmerweiterung Bookmaker.",
 	"bookmaker-bookmaker": "Ein neues Buch erstellen!",
 	"bookmaker-bookmaker-intro": "Willkommen auf der Spezialseite „Ein neues Buch erstellen“ der Erweiterung „Bookmaker“.",

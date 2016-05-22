@@ -12,13 +12,11 @@ class BookValidation {
     $this->hasErrors = false;
     $this->results = array();
     $parts = explode("/", $bookTitleStr);
-    echo "str $bookTitleStr ... " . sizeof($parts);
     $this->version = null;
     if (sizeof($parts) == 2){
       $bookTitleStr = $parts[0];
       $this->version = $parts[1];
     }
-    echo "VER: " . $this->version."<br>";
     $this->bookTitleStr = $bookTitleStr;
     $this->title =Title::newFromText($bookTitleStr);
 
