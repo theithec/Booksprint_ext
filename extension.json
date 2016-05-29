@@ -27,11 +27,7 @@
 	"Hooks": {
 		"ArticlePageDataBefore": [
 			"BookmakerHooks::onArticlePageDataBefore"
-		],
-		"ArticleSaveComplete": [
-			"BookmakerHooks::onArticleSaveComplete"
 		]
-
 	},
 	"MessagesDirs": {
 		"Bookmaker": [
