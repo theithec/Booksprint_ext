@@ -7,8 +7,8 @@
 		]
 	},
 	"bookmaker-desc": "这是一个示例扩展程序",
-	"bookmaker-i18n-welcome": "欢迎来到Bookmaker扩展程序的本地化文件。",
+	"bookmaker-i18n-welcome": "欢迎来到Booksprint_ext扩展程序的本地化文件。",
 	"bookmaker-bookmaker": "您好世界！",
-	"bookmaker-bookmaker-intro": "欢迎来到Bookmaker扩展的“您好世界”特殊页面。",
+	"bookmaker-bookmaker-intro": "欢迎来到Booksprint_ext扩展的“您好世界”特殊页面。",
 	"bookmaker": "您好世界"
 }

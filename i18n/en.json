@@ -3,8 +3,8 @@
 		"authors": []
 	},
 	"bookmaker-desc": "This is an example extension",
-	"bookmaker-i18n-welcome": "Welcome to the localization file of the Bookmaker extension.",
+	"bookmaker-i18n-welcome": "Welcome to the localization file of the Booksprint_ext extension.",
 	"bookmaker-bookmaker": "Hello world!",
-	"bookmaker-bookmaker-intro": "Welcome to the \"Hello world\" special page of the Bookmaker extension.",
+	"bookmaker-bookmaker-intro": "Welcome to the \"Hello world\" special page of the Booksprint_ext extension.",
 	"bookmaker": "Hello world"
 }

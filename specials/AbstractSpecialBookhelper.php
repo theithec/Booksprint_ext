@@ -1,6 +1,6 @@
 <?php
 /**
- * Bookmaker SpecialPage for Bookmaker extension
+ * Booksprint_ext SpecialPage for Booksprint_ext extension
  *
  * @file
  * @ingroup Extensions
@@ -18,7 +18,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
    * Show the page to the user
    *
    * @param string $sub The subpage string argument (if any).
-   *  [[Special:Bookmaker/subpage]].
+   *  [[Special:Booksprint_ext/subpage]].
    */
   public function execute( $sub ) {
     global $wgUser;

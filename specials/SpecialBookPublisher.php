@@ -1,6 +1,6 @@
 <?php
 /**
- * Bookmaker SpecialPage for Bookmaker extension
+ * Booksprint_ext SpecialPage for Booksprint_ext extension
  *
  * @file
  * @ingroup Extensions

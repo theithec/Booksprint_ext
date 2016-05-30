@@ -3,7 +3,7 @@
 require_once(__DIR__."/validateUser.php");
 //die(__DIR__."/../validateUser.php");
 
-class BookmakerAPI extends APIBase{
+class Booksprint_extAPI extends APIBase{
 
   public function execute() {
     validateUserInBookhelperGroup($this->getMain()->getUser()); 

@@ -1,36 +1,36 @@
 {
-	"name": "Bookmaker",
+	"name": "Booksprint_ext",
 	"version": "0.0.1",
 	"author": [
 		"Your Name"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:Bookmaker",
+	"url": "https://www.mediawiki.org/wiki/Extension:Booksprint_ext",
 	"descriptionmsg": "bookmaker-desc",
 	"license-name": "MIT",
 	"type": "other",
 	"AutoloadClasses": {
-		"BookmakerHooks": "Bookmaker.hooks.php",
+		"Booksprint_extHooks": "Booksprint_ext.hooks.php",
 		"SpecialBookCreator": "specials/SpecialBookCreator.php",
 		"SpecialBookPublisher": "specials/SpecialBookPublisher.php", 
 		"SpecialBookVersionizer": "specials/SpecialBookVersionizer.php", 
-    "BookmakerAPI": "BookmakerAPI.php"
+    "Booksprint_extAPI": "Booksprint_extAPI.php"
 	},
   "APIModules": {
-    "bmaker": "BookmakerAPI"
+    "bmaker": "Booksprint_extAPI"
   },
 	"config": {
-		"BookmakerEnableFoo": true
+		"Booksprint_extEnableFoo": true
 	},
 	"ExtensionMessagesFiles": {
-		"BookmakerAlias": "Bookmaker.i18n.alias.php"
+		"Booksprint_extAlias": "Booksprint_ext.i18n.alias.php"
 	},
 	"Hooks": {
 		"ArticlePageDataBefore": [
-			"BookmakerHooks::onArticlePageDataBefore"
+			"Booksprint_extHooks::onArticlePageDataBefore"
 		]
 	},
 	"MessagesDirs": {
-		"Bookmaker": [
+		"Booksprint_ext": [
 			"i18n"
 		]
 	},
@@ -48,7 +48,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteExtPath": "Bookmaker"
+		"remoteExtPath": "Booksprint_ext"
 	},
 	"SpecialPages": {
 		"BookPublisher": "SpecialBookPublisher",

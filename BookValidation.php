@@ -1,6 +1,6 @@
 <?php
 /**
- * BookValidationBookmaker extension
+ * BookValidationBooksprint_ext extension
  *
  * @file
  * @ingroup Extensions 
