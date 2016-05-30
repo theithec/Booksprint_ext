@@ -1,5 +1,5 @@
 {
 	"@metadata": [],
-	"bookmaker-desc": "Dette er en eksempelutvidelse",
-	"bookmaker-i18n-welcome": "Velkommen til lokaliseringsfilen for utvidelsen Booksprint_ext"
+	"booksprint_ext-desc": "Dette er en eksempelutvidelse",
+	"booksprint_ext-i18n-welcome": "Velkommen til lokaliseringsfilen for utvidelsen Booksprint_ext"
 }

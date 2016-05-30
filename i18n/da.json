@@ -4,6 +4,6 @@
 			"Hylle"
 		]
 	},
-	"bookmaker-desc": "Dette er et eksempel på en udvidelse",
-	"bookmaker-i18n-welcome": "Velkommen til lokaliseringsdelen af Booksprint_ext udvidelsen."
+	"booksprint_ext-desc": "Dette er et eksempel på en udvidelse",
+	"booksprint_ext-i18n-welcome": "Velkommen til lokaliseringsdelen af Booksprint_ext udvidelsen."
 }

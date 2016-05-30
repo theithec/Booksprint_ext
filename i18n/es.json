@@ -5,9 +5,9 @@
 			"Macofe"
 		]
 	},
-	"bookmaker-desc": "Esta es una extensión de ejemplo",
-	"bookmaker-i18n-welcome": "Bienvenido al archivo de localización de la extensión de Booksprint_ext.",
-	"bookmaker-bookmaker": "Hola mundo",
-	"bookmaker-bookmaker-intro": "Bienvenidos a la página especial \"Hola mundo\" de la extensión Booksprint_ext.",
-	"bookmaker": "HolaMundo"
+	"booksprint_ext-desc": "Esta es una extensión de ejemplo",
+	"booksprint_ext-i18n-welcome": "Bienvenido al archivo de localización de la extensión de Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Hola mundo",
+	"booksprint_ext-booksprint_ext-intro": "Bienvenidos a la página especial \"Hola mundo\" de la extensión Booksprint_ext.",
+	"booksprint_ext": "HolaMundo"
 }

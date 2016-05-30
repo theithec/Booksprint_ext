@@ -5,7 +5,7 @@
 			"SPQRobin"
 		]
 	},
-	"bookmaker-desc": "Dit is een voorbeeld van de uitbreiding",
-	"bookmaker-i18n-welcome": "Welkom bij het lokalisatiebestand van de Booksprint_ext-uitbreiding.",
-	"bookmaker": "Booksprint_ext"
+	"booksprint_ext-desc": "Dit is een voorbeeld van de uitbreiding",
+	"booksprint_ext-i18n-welcome": "Welkom bij het lokalisatiebestand van de Booksprint_ext-uitbreiding.",
+	"booksprint_ext": "Booksprint_ext"
 }

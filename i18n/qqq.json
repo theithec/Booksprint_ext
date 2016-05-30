@@ -8,9 +8,9 @@
 			"Liuxinyu970226"
 		]
 	},
-	"bookmaker-desc": "{{desc|name=Boilerplate|url=https://www.mediawiki.org/wiki/Extension:Boilerplate}}",
-	"bookmaker-i18n-welcome": "Used to greet the user when reading the i18n/??.json file.",
-	"bookmaker-bookmaker": "Page title of the Booksprint_ext special page.\n{{Identical|Create a new Book}}",
-	"bookmaker-bookmaker-intro": "Text displayed on the Booksprint_ext SpecialPage.",
-	"bookmaker": "Text of the link to the Booksprint_ext special page on SpecialPages.\n{{Identical|Create a new Book}}"
+	"booksprint_ext-desc": "{{desc|name=Boilerplate|url=https://www.mediawiki.org/wiki/Extension:Boilerplate}}",
+	"booksprint_ext-i18n-welcome": "Used to greet the user when reading the i18n/??.json file.",
+	"booksprint_ext-booksprint_ext": "Page title of the Booksprint_ext special page.\n{{Identical|Create a new Book}}",
+	"booksprint_ext-booksprint_ext-intro": "Text displayed on the Booksprint_ext SpecialPage.",
+	"booksprint_ext": "Text of the link to the Booksprint_ext special page on SpecialPages.\n{{Identical|Create a new Book}}"
 }

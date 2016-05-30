@@ -25,7 +25,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
     validateUserInBookhelperGroup($wgUser); 
     $this->user = $wgUser;
     $out = $this->getOutput();
-    $out->addModules('ext.bookmaker');
+    $out->addModules('ext.booksprint_ext');
     $out->addModuleStyles( array(
       'mediawiki.special', 'mediawiki.special.search', 'mediawiki.ui', 'mediawiki.ui.button',
       'mediawiki.ui.input',
@@ -81,6 +81,6 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
     protected abstract function handleBookData($book);
 
     protected function getGroupName() {
-      return 'bookmaker';
+      return 'booksprint_ext';
     }
   }

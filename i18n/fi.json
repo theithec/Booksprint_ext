@@ -6,6 +6,6 @@
 			"VezonThunder"
 		]
 	},
-	"bookmaker-desc": "Tämä on esimerkkilaajennus",
-	"bookmaker-i18n-welcome": "Tervetuloa Booksprint_ext-laajennuksen lokalisointitiedostoon."
+	"booksprint_ext-desc": "Tämä on esimerkkilaajennus",
+	"booksprint_ext-i18n-welcome": "Tervetuloa Booksprint_ext-laajennuksen lokalisointitiedostoon."
 }

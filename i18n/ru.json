@@ -5,9 +5,9 @@
 			"Okras"
 		]
 	},
-	"bookmaker-desc": "Это пример расширения",
-	"bookmaker-i18n-welcome": "Добро пожаловать в файл локализации расширения Booksprint_ext.",
-	"bookmaker-bookmaker": "Привет, мир!",
-	"bookmaker-bookmaker-intro": "Добро пожаловать на спецстраницу «Привет, мир!» расширения Booksprint_ext.",
-	"bookmaker": "Привет, мир"
+	"booksprint_ext-desc": "Это пример расширения",
+	"booksprint_ext-i18n-welcome": "Добро пожаловать в файл локализации расширения Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Привет, мир!",
+	"booksprint_ext-booksprint_ext-intro": "Добро пожаловать на спецстраницу «Привет, мир!» расширения Booksprint_ext.",
+	"booksprint_ext": "Привет, мир"
 }

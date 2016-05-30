@@ -1,5 +1,5 @@
 (function () {
-  mw.bookmaker = {
+  mw.booksprint_ext = {
     watch_status:  function(key){
       var self = this;
       console.log("watch");
@@ -38,7 +38,7 @@
     }
   };
   $(document).ready(function(){
-    mw.bookmaker.wait_for_result();
+    mw.booksprint_ext.wait_for_result();
   });
 
 

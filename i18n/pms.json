@@ -5,7 +5,7 @@
 			"Dragonòt"
 		]
 	},
-	"bookmaker-desc": "Cost a l'é n'esempi d'estension",
-	"bookmaker-i18n-welcome": "Bin-ëvnù ant l'archivi ëd localisassion ëd l'estension Booksprint_ext.",
-	"bookmaker": "CereaMond"
+	"booksprint_ext-desc": "Cost a l'é n'esempi d'estension",
+	"booksprint_ext-i18n-welcome": "Bin-ëvnù ant l'archivi ëd localisassion ëd l'estension Booksprint_ext.",
+	"booksprint_ext": "CereaMond"
 }

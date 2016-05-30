@@ -6,8 +6,8 @@
 			"Woytecr"
 		]
 	},
-	"bookmaker-desc": "To jest rozszerzenie przykładowe",
-	"bookmaker-i18n-welcome": "Witamy w lokalizacji pliku rozszerzenia szablonowego Booksprint_ext.",
-	"bookmaker-bookmaker": "Witaj świecie!",
-	"bookmaker": "WitajŚwiecie"
+	"booksprint_ext-desc": "To jest rozszerzenie przykładowe",
+	"booksprint_ext-i18n-welcome": "Witamy w lokalizacji pliku rozszerzenia szablonowego Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Witaj świecie!",
+	"booksprint_ext": "WitajŚwiecie"
 }

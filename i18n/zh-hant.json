@@ -5,6 +5,6 @@
 			"Simon Shek"
 		]
 	},
-	"bookmaker-desc": "這是一個示例擴展",
-	"bookmaker-i18n-welcome": "歡迎使用 Booksprint_ext 擴充套件的本地語系檔案。"
+	"booksprint_ext-desc": "這是一個示例擴展",
+	"booksprint_ext-i18n-welcome": "歡迎使用 Booksprint_ext 擴充套件的本地語系檔案。"
 }

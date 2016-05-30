@@ -10,7 +10,7 @@ require_once(__DIR__."/AbstractSpecialBookhelper.php");
 
 class SpecialBookPublisher extends AbstractSpecialBookHelper {
   public function __construct() {
-    $this->pageTitleKey = "bookmaker-publisher";
+    $this->pageTitleKey = "booksprint_ext-publisher";
     parent::__construct( 'BookPublisher');
   }
 
@@ -57,6 +57,6 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
 
 
   protected function getGroupName() {
-    return 'bookmaker';
+    return 'booksprint_ext';
   }
 }

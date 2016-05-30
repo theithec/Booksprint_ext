@@ -4,7 +4,7 @@
 			"Shirayuki"
 		]
 	},
-	"bookmaker-desc": "これは拡張機能の例です",
-	"bookmaker-i18n-welcome": "Booksprint_ext 拡張機能の地域化ファイルにようこそ。",
-	"bookmaker": "Booksprint_ext"
+	"booksprint_ext-desc": "これは拡張機能の例です",
+	"booksprint_ext-i18n-welcome": "Booksprint_ext 拡張機能の地域化ファイルにようこそ。",
+	"booksprint_ext": "Booksprint_ext"
 }

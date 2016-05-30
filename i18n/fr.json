@@ -5,9 +5,9 @@
 			"TomT0m"
 		]
 	},
-	"bookmaker-desc": "Voici un exemple d'extension",
-	"bookmaker-i18n-welcome": "Bienvenue dans le fichier de localisation de l'extension passepartout.",
-	"bookmaker-bookmaker": "Bonjour, le monde!",
-	"bookmaker-bookmaker-intro": "Bienvenue sur la page spéciale \"Hello world\" de l'extension Booksprint_ext.",
-	"bookmaker": "Booksprint_ext"
+	"booksprint_ext-desc": "Voici un exemple d'extension",
+	"booksprint_ext-i18n-welcome": "Bienvenue dans le fichier de localisation de l'extension passepartout.",
+	"booksprint_ext-booksprint_ext": "Bonjour, le monde!",
+	"booksprint_ext-booksprint_ext-intro": "Bienvenue sur la page spéciale \"Hello world\" de l'extension Booksprint_ext.",
+	"booksprint_ext": "Booksprint_ext"
 }

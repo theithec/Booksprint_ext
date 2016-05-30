@@ -10,7 +10,7 @@ require_once(__DIR__."/AbstractSpecialBookhelper.php");
 
 class SpecialBookVersionizer extends AbstractSpecialBookHelper {
   public function __construct() {
-    $this->pageTitleKey = "bookmaker-versionizer";
+    $this->pageTitleKey = "booksprint_ext-versionizer";
     parent::__construct( 'BookVersionizer');
   }
 
@@ -63,6 +63,6 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
   
 
   protected function getGroupName() {
-    return 'bookmaker';
+    return 'booksprint_ext';
   }
 }

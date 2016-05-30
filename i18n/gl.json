@@ -6,9 +6,9 @@
 			"Elisardojm"
 		]
 	},
-	"bookmaker-desc": "Esta é unha extensión de exemplo",
-	"bookmaker-i18n-welcome": "Dámoslle a benvida ao ficheiro de localización da extensión Booksprint_ext.",
-	"bookmaker-bookmaker": "Ola mundo!",
-	"bookmaker-bookmaker-intro": "Benvido á páxina especial \"Ola mundo\" da extensión Booksprint_ext.",
-	"bookmaker": "Ola mundo"
+	"booksprint_ext-desc": "Esta é unha extensión de exemplo",
+	"booksprint_ext-i18n-welcome": "Dámoslle a benvida ao ficheiro de localización da extensión Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Ola mundo!",
+	"booksprint_ext-booksprint_ext-intro": "Benvido á páxina especial \"Ola mundo\" da extensión Booksprint_ext.",
+	"booksprint_ext": "Ola mundo"
 }

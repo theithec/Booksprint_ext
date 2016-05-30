@@ -4,9 +4,9 @@
 			"Xuacu"
 		]
 	},
-	"bookmaker-desc": "Esta ye una estensión d'exemplu",
-	"bookmaker-i18n-welcome": "Bienveníu al ficheru de llocalización de la estensión Booksprint_ext.",
-	"bookmaker-bookmaker": "¡Bones, mundu!",
-	"bookmaker-bookmaker-intro": "Bienllegaos a la páxina especial «Bones, mundu» de la estensión Booksprint_ext.",
-	"bookmaker": "HolaMundu"
+	"booksprint_ext-desc": "Esta ye una estensión d'exemplu",
+	"booksprint_ext-i18n-welcome": "Bienveníu al ficheru de llocalización de la estensión Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "¡Bones, mundu!",
+	"booksprint_ext-booksprint_ext-intro": "Bienllegaos a la páxina especial «Bones, mundu» de la estensión Booksprint_ext.",
+	"booksprint_ext": "HolaMundu"
 }

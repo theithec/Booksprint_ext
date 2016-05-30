@@ -6,9 +6,9 @@
 			"Liuxinyu970226"
 		]
 	},
-	"bookmaker-desc": "这是一个示例扩展程序",
-	"bookmaker-i18n-welcome": "欢迎来到Booksprint_ext扩展程序的本地化文件。",
-	"bookmaker-bookmaker": "您好世界！",
-	"bookmaker-bookmaker-intro": "欢迎来到Booksprint_ext扩展的“您好世界”特殊页面。",
-	"bookmaker": "您好世界"
+	"booksprint_ext-desc": "这是一个示例扩展程序",
+	"booksprint_ext-i18n-welcome": "欢迎来到Booksprint_ext扩展程序的本地化文件。",
+	"booksprint_ext-booksprint_ext": "您好世界！",
+	"booksprint_ext-booksprint_ext-intro": "欢迎来到Booksprint_ext扩展的“您好世界”特殊页面。",
+	"booksprint_ext": "您好世界"
 }

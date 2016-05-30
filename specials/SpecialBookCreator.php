@@ -27,7 +27,7 @@ class SpecialBookCreator extends SpecialPage {
 			'mediawiki.ui.input',
 		) );
 
-    $out->setPageTitle( $this->msg( 'bookmaker-bookmaker' ) );
+    $out->setPageTitle( $this->msg( 'booksprint_ext-booksprint_ext' ) );
 
     //$out->addHelpLink( 'How to become a MediaWiki hacker' );
 
@@ -88,7 +88,7 @@ class SpecialBookCreator extends SpecialPage {
       $htmlForm->setSubmitCallback( array( 'SpecialBookCreator', 'processFormInput' ) );
 
     if (sizeof($_POST)==0){
-      $out->addWikiMsg( 'bookmaker-bookmaker-intro' );
+      $out->addWikiMsg( 'booksprint_ext-booksprint_ext-intro' );
     }
       $htmlForm->show();
   }
@@ -138,7 +138,7 @@ class SpecialBookCreator extends SpecialPage {
     var_dump($data);
     if (sizeof($errors)>0){
 
-      $out->addWikiMsg( 'bookmaker-bookmaker-errors' );
+      $out->addWikiMsg( 'booksprint_ext-booksprint_ext-errors' );
       $out->addHTML( '<div class="errorbox"<ul>');
       foreach($errors as $err){
         $out->addHTML( '<li class="error">' . $err . '</li>');

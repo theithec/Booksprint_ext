@@ -5,9 +5,9 @@
 			"Red Winged Duck"
 		]
 	},
-	"bookmaker-desc": "Гэта прыклад пашырэньня",
-	"bookmaker-i18n-welcome": "Вітаем у лякалізацыйным файле пашырэньня Booksprint_ext.",
-	"bookmaker-bookmaker": "Hello world!",
-	"bookmaker-bookmaker-intro": "Вітаем на спэцыяльнай старонцы «Hello world» пашырэньня Booksprint_ext",
-	"bookmaker": "Booksprint_ext"
+	"booksprint_ext-desc": "Гэта прыклад пашырэньня",
+	"booksprint_ext-i18n-welcome": "Вітаем у лякалізацыйным файле пашырэньня Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Hello world!",
+	"booksprint_ext-booksprint_ext-intro": "Вітаем на спэцыяльнай старонцы «Hello world» пашырэньня Booksprint_ext",
+	"booksprint_ext": "Booksprint_ext"
 }

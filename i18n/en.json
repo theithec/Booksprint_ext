@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": []
 	},
-	"bookmaker-desc": "This is an example extension",
-	"bookmaker-i18n-welcome": "Welcome to the localization file of the Booksprint_ext extension.",
-	"bookmaker-bookmaker": "Hello world!",
-	"bookmaker-bookmaker-intro": "Welcome to the \"Hello world\" special page of the Booksprint_ext extension.",
-	"bookmaker": "Hello world"
+	"booksprint_ext-desc": "This is an example extension",
+	"booksprint_ext-i18n-welcome": "Welcome to the localization file of the Booksprint_ext extension.",
+	"booksprint_ext-booksprint_ext": "Hello world!",
+	"booksprint_ext-booksprint_ext-intro": "Welcome to the \"Hello world\" special page of the Booksprint_ext extension.",
+	"booksprint_ext": "Hello world"
 }

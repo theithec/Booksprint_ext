@@ -5,9 +5,9 @@
 			"Ата"
 		]
 	},
-	"bookmaker-desc": "Це приклад розширення",
-	"bookmaker-i18n-welcome": "Ласкаво просимо до файлу локалізації  розширення Booksprint_ext extension.",
-	"bookmaker-bookmaker": "Hello world!",
-	"bookmaker-bookmaker-intro": "Ласкаво просимо на спеціальну сторінку «Hello world» розширення Booksprint_ext.",
-	"bookmaker": "Hello world"
+	"booksprint_ext-desc": "Це приклад розширення",
+	"booksprint_ext-i18n-welcome": "Ласкаво просимо до файлу локалізації  розширення Booksprint_ext extension.",
+	"booksprint_ext-booksprint_ext": "Hello world!",
+	"booksprint_ext-booksprint_ext-intro": "Ласкаво просимо на спеціальну сторінку «Hello world» розширення Booksprint_ext.",
+	"booksprint_ext": "Hello world"
 }

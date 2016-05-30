@@ -5,6 +5,6 @@
 			"Chase me ladies, I'm the Cavalry"
 		]
 	},
-	"bookmaker-desc": "This is an example extension",
-	"bookmaker-i18n-welcome": "Welcome to the localisation file of the Booksprint_ext extension."
+	"booksprint_ext-desc": "This is an example extension",
+	"booksprint_ext-i18n-welcome": "Welcome to the localisation file of the Booksprint_ext extension."
 }

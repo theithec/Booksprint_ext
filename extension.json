@@ -5,7 +5,7 @@
 		"Your Name"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Booksprint_ext",
-	"descriptionmsg": "bookmaker-desc",
+	"descriptionmsg": "booksprint_ext-desc",
 	"license-name": "MIT",
 	"type": "other",
 	"AutoloadClasses": {
@@ -35,9 +35,9 @@
 		]
 	},
 	"ResourceModules": {
-		"ext.bookmaker": {
+		"ext.booksprint_ext": {
 			"scripts": [
-				"modules/ext.bookmaker.js"
+				"modules/ext.booksprint_ext.js"
 			],
 			"styles": [
 				"modules/ext.boilerPlate.foo.css"

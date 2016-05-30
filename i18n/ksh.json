@@ -4,9 +4,9 @@
 			"Purodha"
 		]
 	},
-	"bookmaker-desc": "Dat heh es e eijfach Beischpell för e Zohsazprojramm.",
-	"bookmaker-i18n-welcome": "Wellkumme bei de Övversäzonge för dat Beischpell för e Zohsazprojramm heh.",
-	"bookmaker-bookmaker": "Hey Wält!",
-	"bookmaker-bookmaker-intro": "Wellkumme op dä {{intspecialpage}} met „Hey Wält!“ vum Zohsazprojramm „<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„E janz jewöhnlesch Beijschpell“\">Booksprint_ext</i>“.",
-	"bookmaker": "HalloWält"
+	"booksprint_ext-desc": "Dat heh es e eijfach Beischpell för e Zohsazprojramm.",
+	"booksprint_ext-i18n-welcome": "Wellkumme bei de Övversäzonge för dat Beischpell för e Zohsazprojramm heh.",
+	"booksprint_ext-booksprint_ext": "Hey Wält!",
+	"booksprint_ext-booksprint_ext-intro": "Wellkumme op dä {{intspecialpage}} met „Hey Wält!“ vum Zohsazprojramm „<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„E janz jewöhnlesch Beijschpell“\">Booksprint_ext</i>“.",
+	"booksprint_ext": "HalloWält"
 }

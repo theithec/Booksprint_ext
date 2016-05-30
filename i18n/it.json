@@ -5,9 +5,9 @@
 			"Alexmar983"
 		]
 	},
-	"bookmaker-desc": "Questa è un'estensione di esempio",
-	"bookmaker-i18n-welcome": "Benvenuti al file di localizzazione dell'estensione Booksprint_ext.",
-	"bookmaker-bookmaker": "Salve mondo!",
-	"bookmaker-bookmaker-intro": "Benvenuto alla pagina speciale \"Salve mondo\" dell'estensione Booksprint_ext.",
-	"bookmaker": "Salve mondo"
+	"booksprint_ext-desc": "Questa è un'estensione di esempio",
+	"booksprint_ext-i18n-welcome": "Benvenuti al file di localizzazione dell'estensione Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Salve mondo!",
+	"booksprint_ext-booksprint_ext-intro": "Benvenuto alla pagina speciale \"Salve mondo\" dell'estensione Booksprint_ext.",
+	"booksprint_ext": "Salve mondo"
 }

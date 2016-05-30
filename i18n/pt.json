@@ -5,9 +5,9 @@
 			"Vitorvicentevalente"
 		]
 	},
-	"bookmaker-desc": "Esta é uma extensão exemplificativa",
-	"bookmaker-i18n-welcome": "Bem-vindo(a) ao ficheiro de localização da extensão exemplificativa Booksprint_ext.",
-	"bookmaker-bookmaker": "Olá mundo!",
-	"bookmaker-bookmaker-intro": "Bem-vindo(a) à página especial \"Olá mundo\" da extensão Booksprint_ext.",
-	"bookmaker": "Olá mundo"
+	"booksprint_ext-desc": "Esta é uma extensão exemplificativa",
+	"booksprint_ext-i18n-welcome": "Bem-vindo(a) ao ficheiro de localização da extensão exemplificativa Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Olá mundo!",
+	"booksprint_ext-booksprint_ext-intro": "Bem-vindo(a) à página especial \"Olá mundo\" da extensão Booksprint_ext.",
+	"booksprint_ext": "Olá mundo"
 }

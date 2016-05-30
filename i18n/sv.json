@@ -6,8 +6,8 @@
 			"Rockyfelle"
 		]
 	},
-	"bookmaker-desc": "Detta är ett exempel-tillägg",
-	"bookmaker-i18n-welcome": "Välkommen till Booksprint_ext-tilläggets lokaliseringsfil.",
-	"bookmaker-bookmaker": "Hello world!",
-	"bookmaker": "Hej världen"
+	"booksprint_ext-desc": "Detta är ett exempel-tillägg",
+	"booksprint_ext-i18n-welcome": "Välkommen till Booksprint_ext-tilläggets lokaliseringsfil.",
+	"booksprint_ext-booksprint_ext": "Hello world!",
+	"booksprint_ext": "Hej världen"
 }

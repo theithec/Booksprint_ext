@@ -4,8 +4,8 @@
 			"Robby"
 		]
 	},
-	"bookmaker-desc": "Dëst ass e Beispill vun enger Erweiderung",
-	"bookmaker-i18n-welcome": "Wëllkomm beim Lokalisatiounsfichier vun der Booksprint_ext Erweiderung",
-	"bookmaker-bookmaker": "Ein neues Buch erstellen!",
-	"bookmaker": "Booksprint_ext"
+	"booksprint_ext-desc": "Dëst ass e Beispill vun enger Erweiderung",
+	"booksprint_ext-i18n-welcome": "Wëllkomm beim Lokalisatiounsfichier vun der Booksprint_ext Erweiderung",
+	"booksprint_ext-booksprint_ext": "Ein neues Buch erstellen!",
+	"booksprint_ext": "Booksprint_ext"
 }

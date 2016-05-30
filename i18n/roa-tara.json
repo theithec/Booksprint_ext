@@ -4,9 +4,9 @@
 			"Joetaras"
 		]
 	},
-	"bookmaker-desc": "Queste jè 'n'estenzione de esembie",
-	"bookmaker-i18n-welcome": "Bovègne jndr'à 'u file de localizzazzione de l'estenzione Booksprint_ext.",
-	"bookmaker-bookmaker": "Cià munne!",
-	"bookmaker-bookmaker-intro": "Bovègne jndr'à pàgena speciale \"Cià munne\" pe l'estenzione Booksprint_ext.",
-	"bookmaker": "Cià munne"
+	"booksprint_ext-desc": "Queste jè 'n'estenzione de esembie",
+	"booksprint_ext-i18n-welcome": "Bovègne jndr'à 'u file de localizzazzione de l'estenzione Booksprint_ext.",
+	"booksprint_ext-booksprint_ext": "Cià munne!",
+	"booksprint_ext-booksprint_ext-intro": "Bovègne jndr'à pàgena speciale \"Cià munne\" pe l'estenzione Booksprint_ext.",
+	"booksprint_ext": "Cià munne"
 }

@@ -4,6 +4,6 @@
 			"Farras"
 		]
 	},
-	"bookmaker-desc": "Ini adalah contoh ekstensi",
-	"bookmaker-i18n-welcome": "Selamat datang di berkas lokalisasi ekstensi Booksprint_ext."
+	"booksprint_ext-desc": "Ini adalah contoh ekstensi",
+	"booksprint_ext-i18n-welcome": "Selamat datang di berkas lokalisasi ekstensi Booksprint_ext."
 }
