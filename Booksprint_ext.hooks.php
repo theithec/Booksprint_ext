@@ -11,7 +11,7 @@ require_once("BookValidation.php");
 class Booksprint_extHooks {
   public static function onArticlePageDataBefore($article, $fields){
     global $wgDefaultSkin;
-    $wgDefaultSkin = "handbuchio2"; //getSkinForBookOrDefault($bookSkinPrefix , $bookSkinMode);
+    //$wgDefaultSkin = "Booksprint_skin"; //getSkinForBookOrDefault($bookSkinPrefix , $bookSkinMode);
   
   }
 }
