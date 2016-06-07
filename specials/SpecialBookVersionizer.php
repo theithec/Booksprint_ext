@@ -37,10 +37,21 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
       $api = new ApiMain( $params,  true );
       $api->execute();
       $data = $api->getResult()->getResultData();
-      $status = $data['Result'][0];
+      //echo "<hr>SATA<pre>" ; var_dump($data);echo "</pre>hr>";
+      $errs = array();
+      $result =  $data['Result'];
+      //echo "<hr>iRES<pre>" ; var_dump($result);echo "</pre>hr>";
+      if (sizeof($result) == 0 ){
+	      $errs[] = "Bad result";
+      }else {
+	 $status = $result[0];
       $json_result = json_decode($status);
       $errs = $json_result->errors;
-      if (sizeof($errs) > 0 ){
+
+      
+      }
+
+           if (sizeof($errs) > 0 ){
         $this->showErrors($errs);
               }
       else {

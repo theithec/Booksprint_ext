@@ -73,7 +73,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
     $out = $this->getOutput();
     $out->addHtml("<H2>Fehler sind aufgetreten</h2><ul>");
         foreach($result as $err){
-          $out->addHtml("<li>$err</li>");
+          $out->addHtml('<li class="error">' . $err . '</li>');
         }    
         $out->addHtml('</ul>');
 
