@@ -17,7 +17,6 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
   function handleBookData($book){
     $out = $this->getOutput();
     $book = $this->validation->bookTitleStr;
-    $this->version = $this->validation->version;
     if ($this->version == null){
       $this->showErrors(array("Version fehlt"));
       return;
