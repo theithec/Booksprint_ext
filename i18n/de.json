@@ -5,6 +5,7 @@
 		]
 
 	},
+    "specialpages-group-booksprint_ext": "Booksprint",
 	"booksprint_ext-desc": "Erweiterung zur Versionierung und Konvertierung von zusammenhängenden Seiten (Büchern)",
 	"booksprint_ext-i18n-welcome": "Willkommen bei der Lokalisierungs- und Internationalisierungsdatei der Programmerweiterung Booksprint_ext.",
 	"booksprint_ext-booksprint_ext": "Ein neues Buch erstellen!",
@@ -18,5 +19,22 @@
 	"book-editors-or-authors": "Herausgeber/Autoren", 
 	"book-contributors": "Kontributoren" ,
 	"book-toc": "Inhaltsverzeichnis",
-	"booksprint_ext-booksprint_ext-intro": "Über dieses Formular kann ein neues Buch angelegt werden"
+	"#intro": "Über dieses Formular kann ein neues Buch angelegt werden",
+
+	"bookversionizer": "Versionierung",
+	"bookversionizer-title": "Eine stabile Version eines Buches erstellen",
+	"bookversionizer-intro": "Eine stabile Version eines Buches erstellen",
+	"booksprint_ext-page_exists": "Seite vorhanden?",
+    "booksprint_ext-in_book_category": "In Kategorie \"Buch\"?",
+    "booksprint_ext-has_info": "Template \"Bookinfo\" gefunden?",
+	"booksprint_ext-booklink": "Zum Buch",
+
+    "bookpublisher": "Buchexport",
+    "bookpublisher-title": "Buchexport",
+	"bookpublisher-intro": "Ein Buch in verschiedene Dateiformate exportieren. Soll eine stabile Version exportiert werden, die Version mit Schrägstrich anhängen: <pre>Buchtitel/Version</pre>.",
+	"booksprint_ext-versionizer": "Stabile Version eines Buches erstellen",
+
+	"booksprint_ext-creator": "Ein neues Buch erstellen",
+
+	"end": ""
 }

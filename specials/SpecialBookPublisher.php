@@ -10,8 +10,8 @@ require_once(__DIR__."/AbstractSpecialBookhelper.php");
 
 class SpecialBookPublisher extends AbstractSpecialBookHelper {
   public function __construct() {
-    $this->pageTitleKey = "booksprint_ext-publisher";
     parent::__construct( 'BookPublisher');
+        $out = $this->getOutput();
   }
 
 
@@ -31,6 +31,7 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
       $api = new ApiMain( $params,  true );
       $api->execute();
       $data = $api->getResult()->getResultData();
+      var_dump($data);
       $status = $data['Result'][0];
       $json_result = json_decode($status);
       $errs = $json_result->errors;
@@ -38,12 +39,10 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
         $this->showErrors();
               }
       else {
-        $out->addHtml("<H2>Vorgang läuft</h2>");
-        $out->addHtml('<div id="result" data-key="' .$json_result->result . '"></div>');
+        $out->addHtml('<div id="result" data-key="' .$json_result->result . '"><H2>Vorgang läuft</h2></div>');
         // from now js does the job
       }  
     }
-
     else {
       $html = '<form method="POST"><input name="book" type="hidden" value="'. $book . '">' .
         '<h2>' . $book . '</h2>' .

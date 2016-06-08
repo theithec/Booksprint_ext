@@ -37,18 +37,18 @@
 	"ResourceModules": {
 		"ext.booksprint_ext": {
 			"scripts": [
-				"modules/ext.booksprint_ext.js"
+				"ext.booksprint_ext.js"
 			],
 			"styles": [
-				"modules/ext.booksprint_ext.css"
+				"ext.booksprint_ext.css"
 			],
 			"messages": [],
 			"dependencies": []
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "Booksprint_ext"
+       "localBasePath": "modules",
+       "remoteExtPath": "Booksprint_ext/modules"
 	},
 	"SpecialPages": {
 		"BookPublisher": "SpecialBookPublisher",

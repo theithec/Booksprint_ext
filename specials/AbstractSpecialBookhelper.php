@@ -10,77 +10,84 @@ require_once(__DIR__."/../BookValidation.php");
 require_once(__DIR__."/../validateUser.php");
 
 abstract class AbstractSpecialBookHelper extends SpecialPage {
-  public function __construct($name) {
-    parent::__construct( $name);
-  }
+    public function __construct($name) {
+        parent::__construct( $name);
+        //$out->setPageTitle( $this->msg( 'viewdeletedpage' ) );
 
-  /**
-   * Show the page to the user
-   *
-   * @param string $sub The subpage string argument (if any).
-   *  [[Special:Booksprint_ext/subpage]].
-   */
-  public function execute( $sub ) {
-    global $wgUser;
-    validateUserInBookhelperGroup($wgUser); 
-    $this->user = $wgUser;
-    $out = $this->getOutput();
-    $out->addModules('ext.booksprint_ext');
-    $out->addModuleStyles( array(
-      'mediawiki.special', 'mediawiki.special.search', 'mediawiki.ui', 'mediawiki.ui.button',
-      'mediawiki.ui.input',
-    ) );
-    $out->setPageTitle( $this->msg( $this->pageTitleKey ) );
-    $out->addWikiMsg( $this->pageTitleKey . '-intro' );
-    $this->doAction = isset($_REQUEST['action']) and ($_REQUEST['action'] == true);
-    $this->handleBookFromDataOrShowForm();
-  }
-
-  protected function getForm(){
-    return '<form method="POST"><input name="book" class="mw-ui-input mw-ui-input-inline"/><button class="mw-ui-button mw-ui-progressive" type="submit">Buch suchen</button></form>' ;
-  }
-
-  private function handleBookFromDataOrShowForm(){
-    //var_dump($_REQUEST);
-    $out = $this->getOutput();
-    $book = isset($_REQUEST['book']) ? str_replace(" ", "_",htmlspecialchars($_REQUEST['book'])) : null;
-    if($book == null){
-      $this->getOutput()->addHTML( $this->getForm());
-      return;
-    }else {
-      //die("book $book");
-      $this->validation = new BookValidation($book);
-      if ($this->validation->hasErrors) { 
-        $html = "<ul>";
-        foreach ($this->validation->results as $k=>$v){
-          $html .= '<li><span class="result-key">' . "$k</span> ... "; 
-          if(sizeof($v)==0){
-            $html .= '<span class="result-value-ok">OK</<span></li>'; 
-          } else {
-            $html .= '<span class="result-value-err">' . implode(",", $v) . '</<span></li>'; 
-          }
-        }
-        $html .= "</ul>";
-        $out->addHTML($html);
-        $out->addHTML("<h2>Bitte erst die Fehler beheben</h2>");
-        }
-        else {
-          $this->handleBookData($book);
-        }
-      }
     }
+
+    /**
+     * Show the page to the user
+     *
+     * @param string $sub The subpage string argument (if any).
+     *  [[Special:Booksprint_ext/subpage]].
+     */
+
+    public function execute( $sub ) {
+        global $wgUser;
+        validateUserInBookhelperGroup($wgUser); 
+        $this->user = $wgUser;
+        $out = $this->getOutput();
+        $out->addModules('ext.booksprint_ext');
+        //die(var_dump($out));
+        $out->addModuleStyles( array(
+            'mediawiki.special', 'mediawiki.special.search', 'mediawiki.ui', 'mediawiki.ui.button',
+            'mediawiki.ui.input',
+        ) );
+        $key = strtolower($this->getName());
+        $out->setPageTitle( $this->msg( $key . '-title' ) );
+        $out->addWikiMsg( $key . '-intro' );
+        $this->doAction = isset($_REQUEST['action']) and ($_REQUEST['action'] == true);
+        $this->handleBookFromDataOrShowForm();
+    }
+
+    protected function getForm(){
+        return '<form method="POST"><input name="book" class="mw-ui-input mw-ui-input-inline"/><button class="mw-ui-button mw-ui-progressive" type="submit">Buch suchen</button></form>' ;
+    }
+
+    private function handleBookFromDataOrShowForm(){
+        //var_dump($_REQUEST);
+        $out = $this->getOutput();
+        $book = isset($_REQUEST['book']) ? str_replace(" ", "_",htmlspecialchars($_REQUEST['book'])) : null;
+        if($book == null){
+            $this->getOutput()->addHTML( $this->getForm());
+            return;
+        }else {
+            //die("book $book");
+            $this->validation = new BookValidation($book);
+            if ($this->validation->hasErrors) { 
+                $html = "<ul>";
+                foreach ($this->validation->results as $k=>$v){
+                    $html .= '<li><span class="result-key">' . $this->msg("booksprint_ext-" . $k) . "</span> ... "; 
+                    if(sizeof($v)==0){
+                        $html .= '<span class="result-value-ok success">OK</<span></li>'; 
+                    } else {
+                        $html .= '<span class="result-value-err error">' . implode(",", $v) . '</<span></li>'; 
+                    }
+                }
+                $html .= "</ul>";
+                $out->addHTML($html);
+                $out->addHTML("<h2>Bitte erst die Fehler beheben</h2>");
+            }
+            else {
+                $this->handleBookData($book);
+                $out->addHTML($out->parse( '<div class="booklink">[[' . $_POST['book'] . '|' . $this->msg('booksprint_ext-booklink'). ']]</div>'));
+            }
+        }
+    }
+
     function showErrors($result){
-    $out = $this->getOutput();
-    $out->addHtml("<H2>Fehler sind aufgetreten</h2><ul>");
+        $out = $this->getOutput();
+        $out->addHtml("<H2>Fehler sind aufgetreten</h2><ul>");
         foreach($result as $err){
-          $out->addHtml('<li class="error">' . $err . '</li>');
+            $out->addHtml('<li class="error">' . $err . '</li>');
         }    
         $out->addHtml('</ul>');
+    }
 
-  }
     protected abstract function handleBookData($book);
 
     protected function getGroupName() {
-      return 'booksprint_ext';
+        return 'booksprint_ext';
     }
-  }
+}

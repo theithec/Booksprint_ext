@@ -9,7 +9,7 @@
 require_once(__DIR__."/../validateUser.php");
 class SpecialBookCreator extends SpecialPage {
   public function __construct() {
-    parent::__construct( 'BookCreator' );
+    parent::__construct( 'booksprint_ext-creator' );
   }
 
   /**
@@ -153,4 +153,7 @@ class SpecialBookCreator extends SpecialPage {
     }
     
   }
+    protected function getGroupName() {
+        return 'booksprint_ext';
+    }
 }
