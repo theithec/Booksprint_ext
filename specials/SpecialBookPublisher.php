@@ -14,19 +14,23 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
         $out = $this->getOutput();
   }
 
-
   function handleBookData($book){
     $out = $this->getOutput();
     
     if ($this->doAction) {
-      $params = new DerivativeRequest(
-        $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
-        array(
+        $kwargs =  array(
           'action' => 'bmaker',
           'cmd' => 'publish',
-          'args' => $book,
-          'token' =>  $this->user->getEditToken(), 
-        ) ,true  
+          'args' => $this->validation->bookTitleStr,
+          'token' =>  $this->user->getEditToken() 
+        );
+      if ($this->version != null){
+        $kwargs['args'] .= " -v " . $this->version;  
+      }
+      $params = new DerivativeRequest(
+        $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
+        $kwargs,
+        true  
       );
       $api = new ApiMain( $params,  true );
       $api->execute();
@@ -36,7 +40,7 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
       $json_result = json_decode($status);
       $errs = $json_result->errors;
       if (sizeof($errs) > 0 ){
-        $this->showErrors();
+        $this->showErrors($errs);
               }
       else {
         $out->addHtml('<div id="result" data-key="' .$json_result->result . '"><H2>Vorgang läuft</h2></div>');

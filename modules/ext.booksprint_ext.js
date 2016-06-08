@@ -48,7 +48,7 @@
 			if (key == undefined){
 				setTimeout(self.wait_for_result, 5000);
 			} else if (key=="SUCCESS"){
-				$("#result").append('<p class="success">SUCCESS</p>');
+                self.show_result(key);
 			}else {
 				self.watch_status(key);
 			}

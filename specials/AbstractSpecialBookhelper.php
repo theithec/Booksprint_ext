@@ -70,6 +70,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
                 $out->addHTML("<h2>Bitte erst die Fehler beheben</h2>");
             }
             else {
+                $this->version = $this->validation->version;
                 $this->handleBookData($book);
                 $out->addHTML($out->parse( '<div class="booklink">[[' . $_POST['book'] . '|' . $this->msg('booksprint_ext-booklink'). ']]</div>'));
             }
