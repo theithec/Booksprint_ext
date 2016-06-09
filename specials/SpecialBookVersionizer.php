@@ -9,69 +9,66 @@
 require_once(__DIR__."/AbstractSpecialBookhelper.php");
 
 class SpecialBookVersionizer extends AbstractSpecialBookHelper {
-  public function __construct() {
-    parent::__construct( 'BookVersionizer');
-  }
-
-
-  function handleBookData($book){
-    $out = $this->getOutput();
-    $book = $this->validation->bookTitleStr;
-    if ($this->version == null){
-      $this->showErrors(array("Version fehlt"));
-      return;
+    public function __construct() {
+        parent::__construct( 'BookVersionizer');
     }
 
-    if ($this->doAction) {
-      $params = new DerivativeRequest(
-        $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
-        array(
-          'action' => 'bmaker',
-          'cmd' => 'versionize',
-          'args' => "$book -v " . $this->version,
-          'token' =>  $this->user->getEditToken(), 
-        ) ,true  
-      );
-      $api = new ApiMain( $params,  true );
-      $api->execute();
-      $data = $api->getResult()->getResultData();
-      //echo "<hr>SATA<pre>" ; var_dump($data);echo "</pre>hr>";
-      $errs = array();
-      $result =  $data['Result'];
-      //echo "<hr>iRES<pre>" ; var_dump($result);echo "</pre>hr>";
-      if (sizeof($result) == 0 ){
-	      $errs[] = "Bad result";
-      }else {
-	 $status = $result[0];
-      $json_result = json_decode($status);
-      $errs = $json_result->errors;
+    function handleBookData($book){
+        $out = $this->getOutput();
+        $book = $this->validation->bookTitleStr;
+        if ($this->version == null){
+            $this->showErrors(array("Version fehlt"));
+            return;
+        }
 
-      
-      }
+        if ($this->doAction) {
+            $params = new DerivativeRequest(
+                $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
+                array(
+                    'action' => 'bmaker',
+                    'cmd' => 'versionize',
+                    'args' => "$book -v " . $this->version,
+                    'token' =>  $this->user->getEditToken(), 
+                ) ,true  
+            );
+            $api = new ApiMain( $params,  true );
+            $api->execute();
+            $data = $api->getResult()->getResultData();
+            $errs = array();
+            if ( !array_key_exists('Result', $data)
+                || sizeof($data['Result'] == 0)
+            ){
+                $errs[] = $out->msg("Bad result");
+                debuglog("BAD DATA: "); 
+                debuglog($data); 
+            }else {
+                $result =  $data['Result'];
+                $status = $result[0];
+                $json_result = json_decode($status);
+                $errs = $json_result->errors;
 
-           if (sizeof($errs) > 0 ){
-        $this->showErrors($errs);
-              }
-      else {
-        $out->addHtml("<H2>Vorgang läuft</h2>");
-        $out->addHtml('<div id="result" data-key="' .$json_result->result . '"></div>');
-        // from now js does the job
-      }  
+                if (sizeof($errs) > 0 ){
+                    $this->showErrors($errs);
+                }
+                else {
+                    $out->addHtml("<H2>Vorgang läuft</h2>");
+                    $out->addHtml('<div id="result" data-key="' .$json_result->result . '"></div>');
+                    // from now js takes over
+                }  
+            }
+        }
+
+        else { // no action
+            $html = '<form method="POST"><input name="book" type="hidden" value="'. $book . "/" . $this->version . '">' .
+                '<h2>' . $book . '</h2>' .
+                '<input name="action" type="hidden" value="1">'.
+                '<button class="button" id="publishbookbutton" type="submit">Version "' . $this->version . '" erstellen </button></form>';
+            $out->addHTML($html);
+        }
+
     }
 
-    else {
-      $html = '<form method="POST"><input name="book" type="hidden" value="'. $book . "/" . $this->version . '">' .
-        '<h2>' . $book . '</h2>' .
-        '<input name="action" type="hidden" value="1">'.
-        '<button class="button" id="publishbookbutton" type="submit">Version "' . $this->version . '" erstellen </button></form>';
-      $out->addHTML($html);
+    protected function getGroupName() {
+        return 'booksprint_ext';
     }
-
-  }
-  
-  
-
-  protected function getGroupName() {
-    return 'booksprint_ext';
-  }
 }

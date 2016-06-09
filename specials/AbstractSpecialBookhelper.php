@@ -8,6 +8,7 @@
 
 require_once(__DIR__."/../BookValidation.php");
 require_once(__DIR__."/../validateUser.php");
+require_once(__DIR__."/../debug.php");
 
 abstract class AbstractSpecialBookHelper extends SpecialPage {
     public function __construct($name) {
@@ -26,6 +27,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
     public function execute( $sub ) {
         global $wgUser;
         validateUserInBookhelperGroup($wgUser); 
+        //debuglog("ALL ABOUT THE BASE (class)");
         $this->user = $wgUser;
         $out = $this->getOutput();
         $out->addModules('ext.booksprint_ext');
@@ -53,7 +55,6 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
             $this->getOutput()->addHTML( $this->getForm());
             return;
         }else {
-            //die("book $book");
             $this->validation = new BookValidation($book);
             if ($this->validation->hasErrors) { 
                 $html = "<ul>";
@@ -82,6 +83,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
         $out->addHtml("<H2>Fehler sind aufgetreten</h2><ul>");
         foreach($result as $err){
             $out->addHtml('<li class="error">' . $err . '</li>');
+            debuglog("RESULT ERROR : $err");
         }    
         $out->addHtml('</ul>');
     }
