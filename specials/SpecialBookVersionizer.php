@@ -14,6 +14,7 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
     }
 
     function handleBookData($book){
+        
         $out = $this->getOutput();
         $book = $this->validation->bookTitleStr;
         if ($this->version == null){
@@ -36,7 +37,7 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
             $data = $api->getResult()->getResultData();
             $errs = array();
             if ( !array_key_exists('Result', $data)
-                || sizeof($data['Result'] == 0)
+                || sizeof($data['Result']) == 0
             ){
                 $errs[] = $out->msg("Bad result");
                 debuglog("BAD DATA: "); 
@@ -46,9 +47,9 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
                 $status = $result[0];
                 $json_result = json_decode($status);
                 $errs = $json_result->errors;
-
                 if (sizeof($errs) > 0 ){
                     $this->showErrors($errs);
+                    debuglog($data); 
                 }
                 else {
                     $out->addHtml("<H2>Vorgang läuft</h2>");

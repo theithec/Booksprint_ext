@@ -9,7 +9,7 @@
 require_once(__DIR__."/../validateUser.php");
 class SpecialBookCreator extends SpecialPage {
   public function __construct() {
-    parent::__construct( 'booksprint_ext-creator' );
+    parent::__construct( 'BookCreator' );
   }
 
   /**
@@ -100,13 +100,15 @@ class SpecialBookCreator extends SpecialPage {
       'abstract' => $formData['bookabstract'],
       'kontributoren' => $formData['bookcontributors'],
       'autoren' => $formData['book_authors_or_editors'],
-      'stand' => date("d.m.Y.")
+      'stand' => date("d.m.Y."),
+      'title' => $formData['booktitle'],
+      'version' => $formData['live'],
     );
     $pages = array();
     $i = 0;
     while(array_key_exists('c'.$i, $formData) && ($c=$formData['c'.$i])!==""){
       $d = $formData['c'. $i];
-      $pages[] = array('title'=>$d, 'body' => '\nHier entsteht ' . $d);  
+      $pages[] = array('title'=>$d, 'body' => 'Hier entsteht ' . $d);  
       $i++;
     }
     //var_dump($formData);

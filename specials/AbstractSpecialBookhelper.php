@@ -31,7 +31,6 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
         $this->user = $wgUser;
         $out = $this->getOutput();
         $out->addModules('ext.booksprint_ext');
-        //die(var_dump($out));
         $out->addModuleStyles( array(
             'mediawiki.special', 'mediawiki.special.search', 'mediawiki.ui', 'mediawiki.ui.button',
             'mediawiki.ui.input',
@@ -44,11 +43,11 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
     }
 
     protected function getForm(){
-        return '<form method="POST"><input name="book" class="mw-ui-input mw-ui-input-inline"/><button class="mw-ui-button mw-ui-progressive" type="submit">Buch suchen</button></form>' ;
+        $out = $this->getOutput();
+        return '<form method="POST"><input name="book" class="mw-ui-input mw-ui-input-inline"/><button class="mw-ui-button mw-ui-progressive" type="submit">' . $out->msg("booksprint_ext-validate_book") . '</button></form>' ;
     }
 
     private function handleBookFromDataOrShowForm(){
-        //var_dump($_REQUEST);
         $out = $this->getOutput();
         $book = isset($_REQUEST['book']) ? str_replace(" ", "_",htmlspecialchars($_REQUEST['book'])) : null;
         if($book == null){
