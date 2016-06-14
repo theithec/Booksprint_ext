@@ -35,7 +35,7 @@
 	"bookpublisher-intro": "Ein Buch in verschiedene Dateiformate exportieren. Soll eine stabile Version exportiert werden, die Version mit Schrägstrich anhängen: <pre>Buchtitel/Version</pre>.",
 	"booksprint_ext-versionizer": "Stabile Version eines Buches erstellen",
 
-	"booksprint_ext-creator": "Ein neues Buch erstellen",
+	"bookcreator": "Ein neues Buch erstellen",
 
 	"end": ""
 }

@@ -10,11 +10,11 @@ require_once(__DIR__."/../BookValidation.php");
 require_once(__DIR__."/../validateUser.php");
 require_once(__DIR__."/../debug.php");
 
+
 abstract class AbstractSpecialBookHelper extends SpecialPage {
     public function __construct($name) {
         parent::__construct( $name);
         //$out->setPageTitle( $this->msg( 'viewdeletedpage' ) );
-
     }
 
     /**

@@ -3,6 +3,6 @@ function validateUserInBookhelperGroup($user){
   $userGroups = $user->getGroups();
   global $wgBookhelperGroup;
   if (! in_array($wgBookhelperGroup, $userGroups)){
-    throw new PermissionsError();
+    throw new PermissionsError("edit");
   }
 }
