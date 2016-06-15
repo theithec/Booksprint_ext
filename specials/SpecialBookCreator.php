@@ -103,7 +103,7 @@ class SpecialBookCreator extends SpecialPage {
             'autoren' => $formData['book_authors_or_editors'],
             'stand' => date("d.m.Y."),
             'title' => $formData['booktitle'],
-            'version' => $formData['live'],
+            'version' => 'live',
         );
         $pages = array();
         $i = 0;
@@ -112,9 +112,6 @@ class SpecialBookCreator extends SpecialPage {
             $pages[] = array('title'=>$d, 'body' => 'Hier entsteht ' . $d);  
             $i++;
         }
-        //var_dump($formData);
-        //die();
-        //if ($formData['book_authors_or_editors'] == 'at
         $bookdata = array(
             'title' => $formData['booktitle'],
             'info' => $info,
