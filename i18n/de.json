@@ -36,6 +36,9 @@
 	"booksprint_ext-versionizer": "Stabile Version eines Buches erstellen",
 
 	"bookcreator": "Ein neues Buch erstellen",
+	"abstract": "Beschreibung",
+	"authors": "Autoren",
+	"contributors": "Kontributoren",
 
 	"end": ""
 }
