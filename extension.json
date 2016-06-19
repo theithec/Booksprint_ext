@@ -27,6 +27,9 @@
 	"Hooks": {
 		"ArticlePageDataBefore": [
 			"Booksprint_extHooks::onArticlePageDataBefore"
+		],
+		"ParserFirstCallInit": [
+			"Booksprint_extHooks::onParserSetup"
 		]
 	},
 	"MessagesDirs": {
