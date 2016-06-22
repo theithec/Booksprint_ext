@@ -22,20 +22,20 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
                 'action' => 'bmaker',
                 'cmd' => 'publish',
                 'args' => $this->validation->bookTitleStr,
-                'token' =>  $this->user->getEditToken() 
+                'token' =>  $this->user->getEditToken()
             );
             if ($this->version != null){
-                $kwargs['args'] .= " -v " . $this->version;  
+                $kwargs['args'] .= " -v " . $this->version;
             }
             $params = new DerivativeRequest(
                 $this->getRequest(), // Fallback upon $wgRequest if you can't access context.
                 $kwargs,
-                true  
+                true
             );
             $api = new ApiMain( $params,  true );
             $api->execute();
             $data = $api->getResult()->getResultData();
-            var_dump($data);
+            // var_dump($data);
             $status = $data['Result'][0];
             $json_result = json_decode($status);
             $errs = $json_result->errors;
@@ -45,7 +45,7 @@ class SpecialBookPublisher extends AbstractSpecialBookHelper {
             else {
                 $out->addHtml('<div id="result" data-key="' .$json_result->result . '"><H2>Vorgang läuft</h2></div>');
                 // from now js does the job
-            }  
+            }
         }
         else {
             $html = '<form method="POST"><input name="book" type="hidden" value="'. $book . '">' .

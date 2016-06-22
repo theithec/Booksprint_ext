@@ -21,7 +21,7 @@ class SpecialBookCreator extends SpecialPage {
      */
     public function execute( $sub ) {
         global $wgUser;
-        validateUserInBookhelperGroup($wgUser); 
+        validateUserInBookhelperGroup($wgUser);
         $out = $this->getOutput();
         $out->addModuleStyles( array(
             'mediawiki.special', 'mediawiki.special.search', 'mediawiki.ui', 'mediawiki.ui.button',
@@ -81,7 +81,7 @@ class SpecialBookCreator extends SpecialPage {
                 'class' => 'HTMLTextField',
                 'label' => $i+1,
             );
-        } 
+        }
 
         $htmlForm = new HTMLForm( $formDescriptor, $this->getContext(), 'Book' );
 
@@ -109,7 +109,7 @@ class SpecialBookCreator extends SpecialPage {
         $i = 0;
         while(array_key_exists('c'.$i, $formData) && ($c=$formData['c'.$i])!==""){
             $d = $formData['c'. $i];
-            $pages[] = array('title'=>$d, 'body' => 'Hier entsteht ' . $d);  
+            $pages[] = array('title'=>$d, 'body' => 'Hier entsteht ' . $d);
             $i++;
         }
         $bookdata = array(
@@ -126,8 +126,8 @@ class SpecialBookCreator extends SpecialPage {
                 'action' => 'bmaker',
                 'cmd' => 'create',
                 'args' => "'$json_data'",
-                'token' =>  $context->getUser()->getEditToken(), 
-            ) ,true  
+                'token' =>  $context->getUser()->getEditToken(),
+            ) ,true
         );
         $api = new ApiMain( $params,  true );
         $api->execute();
@@ -135,7 +135,7 @@ class SpecialBookCreator extends SpecialPage {
         $result = json_decode($data['Result'][0]);
         $errors = $result->errors;
         $out = $context->getOutput();
-        var_dump($data);
+        // var_dump($data);
         if (sizeof($errors)>0){
 
             $out->addWikiMsg( 'booksprint_ext-booksprint_ext-errors' );

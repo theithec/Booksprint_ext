@@ -26,7 +26,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
 
     public function execute( $sub ) {
         global $wgUser;
-        validateUserInBookhelperGroup($wgUser); 
+        validateUserInBookhelperGroup($wgUser);
         //debuglog("ALL ABOUT THE BASE (class)");
         $this->user = $wgUser;
         $out = $this->getOutput();
@@ -55,14 +55,14 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
             return;
         }else {
             $this->validation = new BookValidation($book);
-            if ($this->validation->hasErrors) { 
+            if ($this->validation->hasErrors) {
                 $html = "<ul>";
                 foreach ($this->validation->results as $k=>$v){
-                    $html .= '<li><span class="result-key">' . $this->msg("booksprint_ext-" . $k) . "</span> ... "; 
+                    $html .= '<li><span class="result-key">' . $this->msg("booksprint_ext-" . $k) . "</span> ... ";
                     if(sizeof($v)==0){
-                        $html .= '<span class="result-value-ok success">OK</<span></li>'; 
+                        $html .= '<span class="result-value-ok success">OK</<span></li>';
                     } else {
-                        $html .= '<span class="result-value-err error">' . implode(",", $v) . '</<span></li>'; 
+                        $html .= '<span class="result-value-err error">' . implode(",", $v) . '</<span></li>';
                     }
                 }
                 $html .= "</ul>";
@@ -83,7 +83,7 @@ abstract class AbstractSpecialBookHelper extends SpecialPage {
         foreach($result as $err){
             $out->addHtml('<li class="error">' . $err . '</li>');
             debuglog("RESULT ERROR : $err");
-        }    
+        }
         $out->addHtml('</ul>');
     }
 

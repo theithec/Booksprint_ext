@@ -14,7 +14,7 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
     }
 
     function handleBookData($book){
-        
+
         $out = $this->getOutput();
         $book = $this->validation->bookTitleStr;
         if ($this->version == null){
@@ -29,33 +29,37 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
                     'action' => 'bmaker',
                     'cmd' => 'versionize',
                     'args' => "$book -v " . $this->version,
-                    'token' =>  $this->user->getEditToken(), 
-                ) ,true  
+                    'token' =>  $this->user->getEditToken(),
+                ) ,true
             );
             $api = new ApiMain( $params,  true );
             $api->execute();
             $data = $api->getResult()->getResultData();
+		//echo "DATA<br>"; var_dump($data); echo "<br>";
+
             $errs = array();
             if ( !array_key_exists('Result', $data)
                 || sizeof($data['Result']) == 0
             ){
                 $errs[] = $out->msg("Bad result");
-                debuglog("BAD DATA: "); 
-                debuglog($data); 
+                debuglog("BAD DATA: ");
+                debuglog($data);
             }else {
                 $result =  $data['Result'];
                 $status = $result[0];
                 $json_result = json_decode($status);
+		echo "JSONRESULT<br>";
+		//var_dump($json_result);
+		echo "<br>";
                 $errs = $json_result->errors;
                 if (sizeof($errs) > 0 ){
                     $this->showErrors($errs);
-                    debuglog($data); 
+                    debuglog($data);
                 }
                 else {
-                    $out->addHtml("<H2>Vorgang läuft</h2>");
-                    $out->addHtml('<div id="result" data-key="' .$json_result->result . '"></div>');
+                    $out->addHtml('<div id="result" data-key="' .$json_result->result . '"><H2>Vorgang läuft</h2></div>');
                     // from now js takes over
-                }  
+                }
             }
         }
 

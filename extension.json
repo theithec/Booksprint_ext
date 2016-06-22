@@ -10,6 +10,7 @@
 	"type": "other",
 	"AutoloadClasses": {
 		"Booksprint_extHooks": "Booksprint_ext.hooks.php",
+		"BookinfoRenderer": "BookinfoRenderer.php",
 		"SpecialBookCreator": "specials/SpecialBookCreator.php",
 		"SpecialBookPublisher": "specials/SpecialBookPublisher.php", 
 		"SpecialBookVersionizer": "specials/SpecialBookVersionizer.php", 
