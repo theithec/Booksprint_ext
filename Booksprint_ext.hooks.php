@@ -28,7 +28,8 @@ class Booksprint_extHooks {
 		$res = $dbr->select(
 			array( 'categorylinks', 'page' ),                                   // $table
 			array( 'cl_from', 'cl_to', 'page_id', 'page_title' ),
-			'cl_from=page_id AND cl_to="Buch" ',
+			'cl_from=page_id AND cl_to="Buch"  AND ' .
+			'cl_from NOT IN (SELECT cl_from FROM categorylinks where cl_to="Versteckt")',
 		       	__METHOD__,
 			array( 'ORDER BY' => 'page_title ASC' )
 		);
