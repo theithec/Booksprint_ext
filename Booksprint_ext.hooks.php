@@ -9,17 +9,37 @@
 require_once("BookValidation.php");
 
 class Booksprint_extHooks {
-	public static function onArticlePageDataBefore($article, $fields){
-		global $wgDefaultSkin;
-		//$wgDefaultSkin = "Booksprint_skin"; //getSkinForBookOrDefault($bookSkinPrefix , $bookSkinMode);
 
+	public static function onArticlePageDataBefore($article, $fields){
+		//global $wgDefaultSkin;
+		//$wgDefaultSkin = "Booksprint_skin"; //getSkinForBookOrDefault($bookSkinPrefix , $bookSkinMode);
+		// i'll bet we'll need this again
 	}
 
 	public static function onParserSetup(Parser $parser){
 		$parser->setHook("bookinfo", "BookinfoRenderer::renderTagBookinfo");
 		$parser->setHook("booklist", "Booksprint_extHooks::renderTagBooklist");
 	}
+	private static function getAbstractFromTitle($title){
+		$article = Article::newFromID($title->getArticleID());
+		$content = $article->getContent();
+		$start = strpos($content, "ABSTRACT");
+		if ($start === false) {
+			return "";
+		}
+		else {
+			$start += 10;
+		}
 
+		$abs = substr($content, $start);
+		$end = strpos($abs, "|");
+		if ($end === false) {
+			$end = strpos($abs, "}}");
+		}
+		return trim(substr($abs, 0, $end));
+
+
+	}
 
 	public static function renderTagBooklist( $input, array $args, Parser $parser, PPFrame $frame ) {
 
@@ -33,6 +53,8 @@ class Booksprint_extHooks {
 		       	__METHOD__,
 			array( 'ORDER BY' => 'page_title ASC' )
 		);
+
+
 		$html = "<ul>";
 		foreach( $res as $row ) {
 			$btitle =  $row->page_title ;
@@ -42,16 +64,11 @@ class Booksprint_extHooks {
 			//mysqli_real_escape_string
 			//$sel =$vtitle == str_replace(" ", "_", $this->title ) ? 'selected': '';
 			$t = Title::newFromText( $btitle );
-			//$txt = str_replace($this->baseTitle, "", $vtitle);
-			//$txt = $txt == "" ? "Live" : $txt;
-			if(strpos($txt, "/") === 0){
-				$txt = substr($txt, 1, strlen($txt));
-			}
-			$html .= '<li><a href="' . $t->getLinkUrl() . '">' . $btitle . '</a></li>';
+			$a = Article::newFromId($t->getArticleID());
+			$html .= '<li><a href="' . $t->getLinkUrl() . '">' . $btitle . '</a>' .
+				'<br />' .Booksprint_extHooks::getAbstractFromTitle($t)  . '</li>';
 		}
 		$html .= "</ul>";
 		return $html;
 	}
-
-
 }
