@@ -48,9 +48,7 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
                 $result =  $data['Result'];
                 $status = $result[0];
                 $json_result = json_decode($status);
-		echo "JSONRESULT<br>";
-		//var_dump($json_result);
-		echo "<br>";
+		//echo "JSONRESULT<br>"; var_dump($json_result);echo "<br>";
                 $errs = $json_result->errors;
                 if (sizeof($errs) > 0 ){
                     $this->showErrors($errs);
