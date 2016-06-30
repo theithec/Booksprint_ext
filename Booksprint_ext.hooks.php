@@ -16,10 +16,23 @@ class Booksprint_extHooks {
 		// i'll bet we'll need this again
 	}
 
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+		$bookName = $skin->getBookname();
+		if ($bookName !== null){
+			$items = $skin->getBookHeadItems();
+			foreach($items as $k=>$v){
+				$out->addHeadItem($k, $v);
+			}
+		}
+
+	    return true;
+	}
+
 	public static function onParserSetup(Parser $parser){
 		$parser->setHook("bookinfo", "BookinfoRenderer::renderTagBookinfo");
 		$parser->setHook("booklist", "Booksprint_extHooks::renderTagBooklist");
 	}
+
 	private static function getAbstractFromTitle($title){
 		$article = Article::newFromID($title->getArticleID());
 		$content = $article->getContent();
@@ -37,13 +50,10 @@ class Booksprint_extHooks {
 			$end = strpos($abs, "}}");
 		}
 		return trim(substr($abs, 0, $end));
-
-
 	}
 
+
 	public static function renderTagBooklist( $input, array $args, Parser $parser, PPFrame $frame ) {
-
-
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select(
 			array( 'categorylinks', 'page' ),                                   // $table
@@ -61,10 +71,7 @@ class Booksprint_extHooks {
 			if ( strpos($btitle, "/") !== false){
 				continue;
 			}
-			//mysqli_real_escape_string
-			//$sel =$vtitle == str_replace(" ", "_", $this->title ) ? 'selected': '';
 			$t = Title::newFromText( $btitle );
-			$a = Article::newFromId($t->getArticleID());
 			$html .= '<li><a href="' . $t->getLinkUrl() . '">' . $btitle . '</a>' .
 				'<br />' .Booksprint_extHooks::getAbstractFromTitle($t)  . '</li>';
 		}
