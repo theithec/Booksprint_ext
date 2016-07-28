@@ -17,11 +17,13 @@ class Booksprint_extHooks {
 	}
 
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
-		$bookName = $skin->getBookname();
-		if ($bookName !== null){
-			$items = $skin->getBookHeadItems();
-			foreach($items as $k=>$v){
-				$out->addHeadItem($k, $v);
+		if (method_exists($skin, "getBookname")){
+			$bookName = $skin->getBookname();
+			if ($bookName !== null){
+				$items = $skin->getBookHeadItems();
+				foreach($items as $k=>$v){
+					$out->addHeadItem($k, $v);
+				}
 			}
 		}
 

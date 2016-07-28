@@ -4,9 +4,9 @@ class BookinfoRenderer{
 	public function __construct( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$this->html = "";
 		global $wgOut;
+		$this->out = $wgOut;
 		$this->title = $parser->getTitle();
 		$this->baseTitle = str_replace(" ", "_",$this->title->getBaseText());
-		$this->out = $wgOut;
 		$this->required = array( "abstract", "authors" );
 		$this->allowed = array_merge(
 			$this->required,
@@ -30,7 +30,7 @@ class BookinfoRenderer{
 		}
 		foreach ( $this->required as $r ){
 			$this->html .= '<b class="error">Angabe fehlt: '. $r .
-				'.Bitte die Angaben korrigieren.</b>';
+				'. Bitte die Angaben korrigieren.</b>';
 		}
 
 		$this->addInfoTable();
@@ -43,6 +43,10 @@ class BookinfoRenderer{
 	}
 
 	private function infoRow( $name, $val ) {
+		if ($name == "Doi"){
+			$name = "D.o.i.";
+			$val = '<a href="http://doi.org/' . $val . '">' . $val . '<a>';
+		}
 		return '<tr><td><b>' . $name . '</b></td><td>' . $val . '</td></tr>';
 	}
 
@@ -124,6 +128,7 @@ class BookinfoRenderer{
 
 
 	public static function renderTagBookinfo( $input, array $args, Parser $parser, PPFrame $frame ) {
+		$parser->disableCache();
 		$r = new BookinfoRenderer( $input, $args, $parser, $frame );
 		return $r->html;
 	}

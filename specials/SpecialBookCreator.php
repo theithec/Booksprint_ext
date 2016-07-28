@@ -95,7 +95,6 @@ class SpecialBookCreator extends SpecialPage {
     }
 
     function processFormInput( $formData, $form ) {
-        //var_dump($form->getContext()); die();
         $context = $form->getContext();
         $info = array(
             'abstract' => $formData['bookabstract'],
@@ -118,7 +117,6 @@ class SpecialBookCreator extends SpecialPage {
             'pages' => $pages
         );
         $json_data = json_encode($bookdata);
-        //var_dump($form);
         $request = $context->getRequest();
         $params = new DerivativeRequest(
             $request, // Fallback upon $wgRequest if you can't access context.
@@ -133,7 +131,11 @@ class SpecialBookCreator extends SpecialPage {
         $api->execute();
         $data = $api->getResult()->getResultData();
         $result = json_decode($data['Result'][0]);
-        $errors = $result->errors;
+	if ($result == null){
+		$errors = array("Bad Result");
+	} else {
+		$errors = $result->errors;
+	}
         $out = $context->getOutput();
         // var_dump($data);
         if (sizeof($errors)>0){
