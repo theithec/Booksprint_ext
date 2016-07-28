@@ -33,6 +33,7 @@ class Booksprint_extHooks {
 	public static function onParserSetup(Parser $parser){
 		$parser->setHook("bookinfo", "BookinfoRenderer::renderTagBookinfo");
 		$parser->setHook("booklist", "Booksprint_extHooks::renderTagBooklist");
+		$parser->setHook("chapterdoi", "Booksprint_extHooks::renderChapterDoi");
 	}
 
 	private static function getAbstractFromTitle($title){
@@ -79,5 +80,9 @@ class Booksprint_extHooks {
 		}
 		$html .= "</ul>";
 		return $html;
+	}
+	public static function renderChapterDoi( $input, array $args, Parser $parser, PPFrame $frame ) {
+		$parser->disableCache();
+		return "<h3>Chapterdoi:" .  rand(1,99) . "</h3>";
 	}
 }
