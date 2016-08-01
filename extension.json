@@ -14,11 +14,13 @@
 		"SpecialBookCreator": "specials/SpecialBookCreator.php",
 		"SpecialBookPublisher": "specials/SpecialBookPublisher.php",
 		"SpecialBookVersionizer": "specials/SpecialBookVersionizer.php",
-    "Booksprint_extAPI": "Booksprint_extAPI.php"
+		"AllocDoiAPI": "api/AllocDoi.php",
+		"Booksprint_extAPI": "api/Bookhelper.php"
 	},
-  "APIModules": {
-    "bmaker": "Booksprint_extAPI"
-  },
+	"APIModules": {
+		"bmaker": "Booksprint_extAPI",
+		"allocdoi": "AllocDoiAPI"
+	},
 	"config": {
 		"Booksprint_extEnableFoo": true
 	},
@@ -32,8 +34,11 @@
 		"ParserFirstCallInit": [
 			"Booksprint_extHooks::onParserSetup"
 		],
+		"LoadExtensionSchemaUpdates": [
+			"Booksprint_extHooks::onLoadExtensionSchemaUpdates"
+		],
 		"BeforePageDisplay": [
-				"Booksprint_extHooks::onBeforePageDisplay"
+			"Booksprint_extHooks::onBeforePageDisplay"
 		]
 	},
 	"MessagesDirs": {
@@ -54,8 +59,8 @@
 		}
 	},
 	"ResourceFileModulePaths": {
-       "localBasePath": "modules",
-       "remoteExtPath": "Booksprint_ext/modules"
+		"localBasePath": "modules",
+		"remoteExtPath": "Booksprint_ext/modules"
 	},
 	"SpecialPages": {
 		"BookPublisher": "SpecialBookPublisher",

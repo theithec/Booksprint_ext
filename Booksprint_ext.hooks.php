@@ -81,8 +81,35 @@ class Booksprint_extHooks {
 		$html .= "</ul>";
 		return $html;
 	}
+
+
 	public static function renderChapterDoi( $input, array $args, Parser $parser, PPFrame $frame ) {
 		$parser->disableCache();
-		return "<h3>Chapterdoi:" .  rand(1,99) . "</h3>";
+		$html = "";
+		$rev = isset($_GET['stableid']) ? intval($_GET['stableid']) : null;
+		if ($rev !== null){
+			$dbr = wfGetDB( DB_SLAVE );
+			$res = $dbr->select(
+				array( 'booksprint_ext_doi4rev' ),                                   // $table
+				array( 'doi' ),
+				'rev=' . $rev,
+				__METHOD__
+			);
+
+			foreach( $res as $row ) {
+				$html .= "<h3>Chapterdoi:" . $row->doi . " </h3>";
+			}
+		}
+		return $html;
+	}
+
+
+	public static function onLoadExtensionSchemaUpdates (DatabaseUpdater $updater) {
+		$updater->addExtensionTable( 'booksprint_ext_alloc_dois',
+					__DIR__ . '/sql/booksprint_ext_alloc_dois.sql' );
+	    	return true;
+
 	}
 }
+//global $wgHooks;
+//$wgHooks['LoadExtensionSchemaUpdates'][] = "Booksprint_extHooks::onLoadExtensionSchemaUpdates";

@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-require_once(__DIR__."/validateUser.php");
-require_once(__DIR__."/debug.php");
+require_once(__DIR__."/../validateUser.php");
+require_once(__DIR__."/../debug.php");
 
 class Booksprint_extAPI extends APIBase{
 
     public function execute() {
-        validateUserInBookhelperGroup($this->getMain()->getUser()); 
+        validateUserInBookhelperGroup($this->getMain()->getUser());
         global $wgBookhelperCommand;
         $cmd = $this->getMain()->getVal( 'cmd' );
         $args = $this->getMain()->getVal( 'args' );
