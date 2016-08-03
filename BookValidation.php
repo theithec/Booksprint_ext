@@ -3,7 +3,7 @@
  * BookValidationBooksprint_ext extension
  *
  * @file
- * @ingroup Extensions 
+ * @ingroup Extensions
  */
 
 class BookValidation {
@@ -44,12 +44,13 @@ class BookValidation {
         if($this->bookPageText==""){
             $res['errors'][] = "Die Seite $this->title existiert nicht";
         }
-        return $this->addResult('page_exists',$res); 
+        return $this->addResult('page_exists',$res);
     }
 
     function validateBookPageInBookCategory(){
-        $categoryTree = $this->title->getParentCategoryTree();
-        $categories = array_keys($categoryTree);
+        //$categories = array_keys($categoryTree);
+        $categories = array_keys($this->title->getParentCategories());
+	//var_dump($categories);
         $isBook = in_array('Kategorie:Buch', $categories);
         $res = array();
         if(! $isBook){

@@ -102,6 +102,7 @@ class BookinfoRenderer{
 		       	__METHOD__,
 			array( 'ORDER BY' => 'page_title ASC' )
 		);
+		//echo "<pre>"; die(var_dump($res));
 		$versionsHtml = "";
 		foreach( $res as $row ) {
 			$vtitle =  $row->page_title ;
