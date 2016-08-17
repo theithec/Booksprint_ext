@@ -11,17 +11,39 @@ class Booksprint_extAPI extends APIBase{
         $cmd = $this->getMain()->getVal( 'cmd' );
         $args = $this->getMain()->getVal( 'args' );
         $pre_cmd_args = "";
-        if ( $cmd==="publish" ){
+        if ( $cmd==="publish" || $cmd==="versionize"){
             $pre_cmd_args = "--queued";
 
         }
         $full_cmd = "$wgBookhelperCommand $pre_cmd_args $cmd $args";
+	echo "$full_cmd <br>";
         $this->getResult()->addValue(null, "Full Command", $full_cmd);
-        exec($full_cmd, $result, $return_var);
-        debuglog($full_cmd, $result, $return_var);
+		exec($full_cmd, $result, $return_var);
+		debuglog($full_cmd, $result, $return_var);
+		//if ($return_var == 0){
+		if (sizeof($result) == 0){
+			$this->getResult()->addValue(null, "Result",
+				[json_encode([
+					"result"=>"FAILURE",
+					"errors"=>["SOMETHING BAD"]
+				])]);
 
-        $this->getResult()->addValue(null, "Result", $result);
-        $this->getResult()->addValue(null, "Return Var", $return_var);
+		}else {
+
+			$this->getResult()->addValue(null, "Result", $result);
+		}
+
+		$this->getResult()->addValue(null, "Return Var", $return_var);
+		/*} else {
+			$this->getResult()->addValue(null, "Result",
+				["result" => "FAILED",
+				 "errors" => json_encode(['errors'=>["ERROR"]])]);
+			$this->getResult()->addValue(null, "Return Var", -1);
+			}*/
+		//die(var_dump($this->getResult()));
+		//echo $return_var;
+
+
     }
 
 

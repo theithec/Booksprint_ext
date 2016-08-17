@@ -6,6 +6,9 @@ class BookinfoRenderer{
 		global $wgOut;
 		$this->out = $wgOut;
 		$this->title = $parser->getTitle();
+		// 1.27 bails without:
+		$this->out->setTitle($this->title);
+
 		$this->baseTitle = str_replace(" ", "_",$this->title->getBaseText());
 		$this->required = array( "abstract", "authors" );
 		$this->allowed = array_merge(
@@ -123,8 +126,6 @@ class BookinfoRenderer{
 				'<select id="bookversion-selector" style="width: 80%" onchange="location = this.value;">' .
 				$versionsHtml . '</select></label></div>';
 		}
-
-
 	}
 
 

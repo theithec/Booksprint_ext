@@ -22,16 +22,19 @@
                     try{
                         json = JSON.parse(data.Result);
                     } catch(err){
-                        console.error(data);
                         self.show_result("error", err);
                         return;
                     }
                     var res = json.result;
+		    console.log("RES", res);
 
                     if (res ===  "PENDING" ){
                         setTimeout(function(){self.watch_status(key);}, 5000);
-                    }else {
-                        var classname = res === "SUCCESS" || res === "PENDING" ? res.toLowerCase(): "error" ;
+		    }else if (res === "FAILURE"){
+			    self.show_result("error", "Fehler:<br>" + json.errors.join());
+
+		    }else {
+                        var classname = res === "SUCCESS" ? res.toLowerCase(): "error" ;
                         self.show_result(classname);
                     }
                 })

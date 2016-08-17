@@ -38,7 +38,7 @@ class AllocDoiAPI extends APIBase{
 	public function getDescription() {
 		return 'Reserves a doi (or deletes one)"';
 	}
-	public function needsToken2() {
+	public function needsToken() {
 		return 'csrf';
 	}
 
@@ -53,6 +53,10 @@ class AllocDoiAPI extends APIBase{
 					ApiBase::PARAM_TYPE=> 'string',
 					ApiBase::PARAM_REQUIRED=> true,
 					ApiBase::PARAM_ISMULTI=> true
+				],
+				'continue'=> [
+					ApiBase::PARAM_TYPE=> 'string',
+					ApiBase::PARAM_REQUIRED=> False
 				]
 			]
 	       	);

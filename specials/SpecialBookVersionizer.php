@@ -47,6 +47,9 @@ class SpecialBookVersionizer extends AbstractSpecialBookHelper {
             }else {
                 $result =  $data['Result'];
                 $status = $result[0];
+		//die(var_dump($status));
+		//array(1) { [0]=> string(76) "{"result": "FAILURE", "errors": ["Page already exists: VIVO-Handbuch/1.2a"]}" } 1string(76) "{"result": "FAILURE", "errors": ["Page already exists: VIVO-Handbuch/1.2a"]}"
+                //$json_result = json_decode($status);
                 $json_result = json_decode($status);
 		//echo "JSONRESULT<br>"; var_dump($json_result);echo "<br>";
                 $errs = $json_result->errors;
