@@ -2,7 +2,7 @@
 
 class BookinfoRenderer{
 	public function __construct( $input, array $args, Parser $parser, PPFrame $frame ) {
-		$this->html = "";
+		$this->html = '<div class="bookinfo">';
 		global $wgOut;
 		$this->out = $wgOut;
 		$this->title = $parser->getTitle();
@@ -42,6 +42,7 @@ class BookinfoRenderer{
 		$this->addFileLinks();
 		$this->html .= '<div class="large-2 columns">' .
 			$this->out->parse('[[' . $this->title . '/_Druckversion|Druckversion]]' ) . ' </div>';
+		$this->html .= '</div>';
 		$this->html .= '</div>';
 	}
 
