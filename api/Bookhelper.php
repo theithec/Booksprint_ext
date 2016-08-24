@@ -16,7 +16,7 @@ class Booksprint_extAPI extends APIBase{
 
         }
         $full_cmd = "$wgBookhelperCommand $pre_cmd_args $cmd $args";
-	echo "$full_cmd <br>";
+	//echo "$full_cmd <br>";
         $this->getResult()->addValue(null, "Full Command", $full_cmd);
 		exec($full_cmd, $result, $return_var);
 		debuglog($full_cmd, $result, $return_var);
