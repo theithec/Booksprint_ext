@@ -75,7 +75,7 @@ class Booksprint_extHooks {
 				continue;
 			}
 			$t = Title::newFromText( $btitle );
-			$html .= '<li><a href="' . $t->getLinkUrl() . '">' . $btitle . '</a>' .
+			$html .= '<li><a href="' . $t->getLinkUrl() . '">' . str_replace("_", " ", $btitle)  . '</a>' .
 				'<br />' .Booksprint_extHooks::getAbstractFromTitle($t)  . '</li>';
 		}
 		$html .= "</ul>";
