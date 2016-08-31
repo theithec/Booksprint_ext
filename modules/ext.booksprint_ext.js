@@ -9,7 +9,6 @@
         },
         watch_status:  function(key){
             var self = this;
-            //console.log("watch");
             mw.loader.using( 'mediawiki.api', function () {
                 ( new mw.Api() ).post( {
                     action: 'bmaker',
@@ -26,7 +25,6 @@
                         return;
                     }
                     var res = json.result;
-		    console.log("RES", res);
 
                     if (res ===  "PENDING" ){
                         setTimeout(function(){self.watch_status(key);}, 5000);
