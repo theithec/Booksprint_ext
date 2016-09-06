@@ -49,7 +49,7 @@ class BookinfoRenderer{
 	private function infoRow( $name, $val ) {
 		if ($name == "Doi"){
 			$name = "Doi";
-			$val = '<a href="http://doi.org/' . $val . '">' . $val . '<a>';
+			$val = '<a href="https://doi.org/' . $val . '">' . $val . '<a>';
 		}
 		return '<tr><td><b>' . $name . '</b></td><td>' . $val . '</td></tr>';
 	}
